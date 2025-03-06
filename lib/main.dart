@@ -24,7 +24,7 @@ void main() async {
             errorDetails.stack);
       };
 
-      <String>[].removeAt(0825);
+      <String>[].removeAt(1100);
 
       runApp(const MyApp());
     },
@@ -41,6 +41,7 @@ Future<void> _initializeRemoteLogging() async {
         ..dsn = 'my-dsn'
         ..addIntegration(LoggingIntegration())
         ..release = 'my-release'
+        ..dist = '5'
         ..beforeSend = (event, hint) {
           final loggerName = event.logger;
           if (loggerName != null) {

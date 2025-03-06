@@ -16,7 +16,6 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
 
 environment:
   sdk: ^3.6.1
@@ -31,12 +30,9 @@ dependencies:
   flutter:
     sdk: flutter
   logging: ^1.2.0
-  sentry_dart_plugin:
-    git:
-      url: https://github.com/getsentry/sentry-dart-plugin.git
-      ref: fc658591361354a3f93cf174098dd4d8df4b4375
-  sentry_flutter: ^8.13.0
-  sentry_logging: ^8.13.0
+  sentry_dart_plugin: ^2.4.1
+  sentry_flutter: ^8.13.2
+  sentry_logging: ^8.13.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -99,7 +95,8 @@ flutter:
 sentry:
   upload_source_maps: true
   upload_sources: true
-  release: 'my-release'
-  project: 'my-project'
-  org: "my-org"
-  auth_token: <my-token>
+  release: my-release
+  dist: 5
+  project: my-project-test
+  org: eurofunk
+  auth_token: <my-auth-token>
